@@ -1,0 +1,105 @@
+@import "../../themes/Color.scss";
+@import "../../themes/Default.scss";
+@import "../../themes/Responsive.scss";
+
+.home {
+  box-sizing: content-box;
+  margin-top: 100px;
+  .heading,
+  .servicesWrapper {
+    display: flex;
+    justify-content: space-between;
+    @include Responsive(MD) {
+      height: 300px;
+    }
+    &-containt,
+    &-left {
+      display: flex;
+      flex-direction: column;
+      width: 48%;
+      justify-content: space-between;
+
+      .text {
+        width: 50%;
+        padding: 10px 25px;
+        background-color: $yellow400;
+        border-radius: 50px;
+      }
+      .title {
+      }
+      .introduct {
+        margin-bottom: $lager;
+      }
+      .buttonWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include Responsive(XS) {
+          width: 100%;
+        }
+        @include Responsive(MD) {
+          width: 35%;
+        }
+
+        .button {
+          background-color: $yellow400;
+          color: $gray800;
+          font-weight: bold;
+        }
+        .link {
+          color: $yellow400;
+          text-decoration: underline;
+          font-weight: bold;
+        }
+      }
+    }
+    &-containt {
+      .text {
+        background-color: transparent;
+        padding: 0;
+        color: $yellow400;
+        font-weight: bold;
+      }
+      .button {
+        width: 50%;
+      }
+    }
+    &-right {
+      width: 48%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      .img {
+        object-fit: contain;
+        @include Responsive(XS) {
+          width: 100%;
+        }
+        @include Responsive(MD) {
+          width: 50%;
+        }
+      }
+      .boxTeam {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .boxQuocte {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+  .servicesWrapper {
+    display: flex;
+    margin-top: 100px;
+    &-card {
+      width: 48%;
+      .listCard {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../themes/Color.scss";
+
+.card{
+    box-sizing: border-box;
+    padding: 40px 20px;
+    width: 45%;
+    border-bottom: 1px solid rgb(213, 213, 213);
+    .iconWrapper{
+        position: relative;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        background-color: $yellow400;
+        .icon{
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+    }
+}
